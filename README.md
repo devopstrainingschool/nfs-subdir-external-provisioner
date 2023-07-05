@@ -23,7 +23,12 @@ $ helm install nfs-subdir-external-provisioner nfs-subdir-external-provisioner/n
     --set nfs.server=x.x.x.x \
     --set nfs.path=/exported/path
 ```
-
+##### To mount the AWS EFS use this path:
+```
+ nfs:
+            server: fs-123abc.efs.amazonaws.com
+            path: /
+```
 ### With Kustomize
 
 **Step 1: Get connection information for your NFS server**
